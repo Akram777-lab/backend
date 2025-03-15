@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_course_course_stats",
+  "info": {
+    "displayName": "course-stats",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_course_course_placements",
+  "info": {
+    "displayName": "course-placement",
+    "icon": "briefcase"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

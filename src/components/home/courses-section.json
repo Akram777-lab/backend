@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_home_courses_sections",
+  "info": {
+    "displayName": "courses-section",
+    "icon": "book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "courses": {
+      "type": "component",
+      "repeatable": false,
+      "component": "dynamic-zone.related-courses"
+    }
+  }
+}

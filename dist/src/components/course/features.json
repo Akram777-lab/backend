@@ -1,0 +1,21 @@
+{
+    "collectionName": "components_course_features",
+    "info": {
+        "displayName": "features",
+        "icon": "connector"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "text"
+        },
+        "features": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.steps"
+        }
+    }
+}

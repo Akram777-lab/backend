@@ -1,0 +1,59 @@
+{
+    "kind": "collectionType",
+    "collectionName": "certificates",
+    "info": {
+        "singularName": "certificate",
+        "pluralName": "certificates",
+        "displayName": "Certificate",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {
+        "i18n": {
+            "localized": true
+        }
+    },
+    "attributes": {
+        "student_name": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "certificate_id": {
+            "type": "customField",
+            "options": {
+                "uuid-format": "^SMA\\d{4}[A-Z]{2}\\d{2}$"
+            },
+            "customField": "plugin::strapi-advanced-uuid.uuid"
+        },
+        "course_name": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "grade": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "date": {
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "type": "date"
+        }
+    }
+}

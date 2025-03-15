@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_shared_footers",
+  "info": {
+    "displayName": "footer",
+    "icon": "seed",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    },
+    "phone": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.icon-link"
+    },
+    "email": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.icon-link"
+    },
+    "socials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.icon-link"
+    },
+    "misc": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.icon-link"
+    }
+  }
+}

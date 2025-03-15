@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_course_main_contents",
+  "info": {
+    "displayName": "Main Content",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "star": {
+      "type": "integer",
+      "max": 5
+    },
+    "ratings": {
+      "type": "biginteger"
+    },
+    "fees": {
+      "type": "biginteger"
+    },
+    "discount_fees": {
+      "type": "biginteger"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "stats": {
+      "type": "component",
+      "repeatable": true,
+      "component": "course.course-stats"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

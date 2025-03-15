@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_home_abouts",
+  "info": {
+    "displayName": "about",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "faq": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.question-answer"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_icon_links",
+  "info": {
+    "displayName": "icon_link",
+    "icon": "bell"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    }
+  }
+}

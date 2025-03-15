@@ -1,0 +1,17 @@
+{
+    "collectionName": "components_items_course_items",
+    "info": {
+        "displayName": "course-item"
+    },
+    "options": {},
+    "attributes": {
+        "text": {
+            "type": "string"
+        },
+        "courses": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.link"
+        }
+    }
+}

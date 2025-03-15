@@ -1,0 +1,31 @@
+{
+    "collectionName": "components_shared_links",
+    "info": {
+        "displayName": "Link",
+        "icon": "link",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "text": {
+            "type": "string"
+        },
+        "URL": {
+            "type": "string"
+        },
+        "target": {
+            "type": "enumeration",
+            "enum": [
+                "_blank",
+                "_self",
+                "_parent",
+                "_top"
+            ]
+        },
+        "sublinks": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.sub-link"
+        }
+    }
+}
