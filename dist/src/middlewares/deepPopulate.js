@@ -11,6 +11,7 @@ const pluralize_1 = __importDefault(require("pluralize"));
 const { CREATED_BY_ATTRIBUTE, UPDATED_BY_ATTRIBUTE } = utils_1.contentTypes.constants;
 const extractPathSegment = (url) => { var _a; return ((_a = url.match(/\/([^/?]+)(?:\?|$)/)) === null || _a === void 0 ? void 0 : _a[1]) || ''; };
 const getDeepPopulate = (uid, opts = {}) => {
+    // @ts-ignore
     const model = strapi.getModel(uid);
     const attributes = Object.entries(model.attributes);
     return attributes.reduce((acc, [attributeName, attribute]) => {

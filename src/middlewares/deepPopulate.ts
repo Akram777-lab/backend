@@ -20,6 +20,7 @@ const { CREATED_BY_ATTRIBUTE, UPDATED_BY_ATTRIBUTE } = contentTypes.constants;
 const extractPathSegment = (url: string) => url.match(/\/([^/?]+)(?:\?|$)/)?.[1] || '';
 
 const getDeepPopulate = (uid: UID.Schema, opts: Options = {}) => {
+  // @ts-ignore
   const model = strapi.getModel(uid);
   const attributes = Object.entries(model.attributes);
 
