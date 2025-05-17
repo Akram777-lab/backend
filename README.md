@@ -40,6 +40,13 @@ Strapi gives you many possible deployment options for your project including [St
 yarn strapi deploy
 ```
 
+## ⚙️ Data Transfer
+- Create a transfer token and give it full access/push access.
+- Go to your project, then enter the below command or [follow the instructions](https://docs.strapi.io/cms/data-management/transfer#setup-and-run-the-data-transfer)
+- ```
+  yarn strapi transfer --to destinationURL
+  ```
+
 ## 💻 Server Configurations
 
 - Whenever EC2 Instance has been stopped and started change the IP in godaddy
