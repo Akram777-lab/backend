@@ -1,0 +1,67 @@
+{
+    "kind": "collectionType",
+    "collectionName": "blogs",
+    "info": {
+        "singularName": "blog",
+        "pluralName": "blogs",
+        "displayName": "Blogs",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "blogTitle": {
+            "type": "string"
+        },
+        "blogContent": {
+            "type": "richtext"
+        },
+        "blogPrimaryImage": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "blogPublishedDateTime": {
+            "type": "datetime"
+        },
+        "blogReadTime": {
+            "type": "integer"
+        },
+        "blogAuthor": {
+            "type": "string"
+        },
+        "blogId": {
+            "type": "customField",
+            "options": {
+                "uuid-format": "07584816-d2cd-443b-8dfe-940000a3f916"
+            },
+            "customField": "plugin::strapi-advanced-uuid.uuid"
+        },
+        "blogKeywords": {
+            "type": "string"
+        },
+        "slugBlogTitle": {
+            "type": "uid",
+            "targetField": "blogTitle"
+        },
+        "blogOverview": {
+            "type": "text"
+        },
+        "isMostPopular": {
+            "type": "boolean"
+        },
+        "Seo": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.seo"
+        }
+    }
+}
