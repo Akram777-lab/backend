@@ -369,6 +369,56 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
+  collectionName: 'blogs';
+  info: {
+    description: '';
+    displayName: 'Blogs';
+    pluralName: 'blogs';
+    singularName: 'blog';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blogAuthor: Schema.Attribute.String;
+    blogContent: Schema.Attribute.RichText;
+    blogId: Schema.Attribute.UID<
+      undefined,
+      {
+        'uuid-format': '07584816-d2cd-443b-8dfe-940000a3f916';
+      }
+    > &
+      Schema.Attribute.CustomField<
+        'plugin::strapi-advanced-uuid.uuid',
+        {
+          'uuid-format': '07584816-d2cd-443b-8dfe-940000a3f916';
+        }
+      >;
+    blogKeywords: Schema.Attribute.String;
+    blogOverview: Schema.Attribute.Text;
+    blogPrimaryImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    blogPublishedDateTime: Schema.Attribute.DateTime;
+    blogReadTime: Schema.Attribute.Integer;
+    blogTitle: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    isMostPopular: Schema.Attribute.Boolean;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Seo: Schema.Attribute.Component<'shared.seo', true>;
+    slugBlogTitle: Schema.Attribute.UID<'blogTitle'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCertificateCertificate extends Struct.CollectionTypeSchema {
   collectionName: 'certificates';
   info: {
@@ -1450,6 +1500,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::blog.blog': ApiBlogBlog;
       'api::certificate.certificate': ApiCertificateCertificate;
       'api::company.company': ApiCompanyCompany;
       'api::course.course': ApiCourseCourse;
