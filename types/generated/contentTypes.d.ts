@@ -386,13 +386,13 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     blogId: Schema.Attribute.UID<
       undefined,
       {
-        'uuid-format': '07584816-d2cd-443b-8dfe-940000a3f916';
+        'uuid-format': '^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$';
       }
     > &
       Schema.Attribute.CustomField<
         'plugin::strapi-advanced-uuid.uuid',
         {
-          'uuid-format': '07584816-d2cd-443b-8dfe-940000a3f916';
+          'uuid-format': '^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$';
         }
       >;
     blogKeywords: Schema.Attribute.String;
