@@ -1,0 +1,52 @@
+{
+    "kind": "collectionType",
+    "collectionName": "cities",
+    "info": {
+        "singularName": "city",
+        "pluralName": "cities",
+        "displayName": "City",
+        "description": "Cities where centers/branches are located"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {
+        "i18n": {
+            "localized": true
+        }
+    },
+    "attributes": {
+        "name": {
+            "type": "string",
+            "required": true,
+            "unique": true,
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "description": {
+            "type": "text",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "online": {
+            "type": "text",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "branches": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::branch.branch",
+            "mappedBy": "city"
+        }
+    }
+}
