@@ -179,6 +179,38 @@ export interface ItemsCourseItem extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedAddress extends Struct.ComponentSchema {
+  collectionName: 'components_shared_addresses';
+  info: {
+    description: '';
+    displayName: 'Address';
+    icon: 'house';
+  };
+  attributes: {
+    area: Schema.Attribute.String;
+    building_number: Schema.Attribute.String & Schema.Attribute.Required;
+    country: Schema.Attribute.String & Schema.Attribute.Required;
+    landmark: Schema.Attribute.String;
+    postal_code: Schema.Attribute.String;
+    state: Schema.Attribute.String & Schema.Attribute.Required;
+    street: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SharedEnquiryContact extends Struct.ComponentSchema {
+  collectionName: 'components_shared_enquiry_contacts';
+  info: {
+    description: '';
+    displayName: 'enquiry_contact';
+    icon: 'phone';
+  };
+  attributes: {
+    email: Schema.Attribute.Component<'shared.icon-link', false>;
+    phone: Schema.Attribute.Component<'shared.icon-link', false>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedFooter extends Struct.ComponentSchema {
   collectionName: 'components_shared_footers';
   info: {
@@ -188,11 +220,18 @@ export interface SharedFooter extends Struct.ComponentSchema {
   };
   attributes: {
     address: Schema.Attribute.Text;
+    bottom_address: Schema.Attribute.Text;
+    company: Schema.Attribute.Component<'shared.icon-link', true>;
+    course_enquiry: Schema.Attribute.Component<'shared.enquiry-contact', true>;
     email: Schema.Attribute.Component<'shared.icon-link', false>;
+    legal_links: Schema.Attribute.Component<'shared.icon-link', true>;
     misc: Schema.Attribute.Component<'shared.icon-link', true>;
     name: Schema.Attribute.String;
     phone: Schema.Attribute.Component<'shared.icon-link', false>;
+    ps_text: Schema.Attribute.Text;
     socials: Schema.Attribute.Component<'shared.icon-link', true>;
+    student_zone: Schema.Attribute.Component<'shared.icon-link', true>;
+    top_courses: Schema.Attribute.Component<'shared.icon-link', true>;
   };
 }
 
@@ -234,6 +273,18 @@ export interface SharedLink extends Struct.ComponentSchema {
     >;
     text: Schema.Attribute.String;
     URL: Schema.Attribute.String;
+  };
+}
+
+export interface SharedPhoneNumber extends Struct.ComponentSchema {
+  collectionName: 'components_shared_phone_numbers';
+  info: {
+    description: '';
+    displayName: 'Phone Number';
+    icon: 'phone';
+  };
+  attributes: {
+    phone: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -346,10 +397,13 @@ declare module '@strapi/strapi' {
       'home.hero': HomeHero;
       'home.why-choose-us': HomeWhyChooseUs;
       'items.course-item': ItemsCourseItem;
+      'shared.address': SharedAddress;
+      'shared.enquiry-contact': SharedEnquiryContact;
       'shared.footer': SharedFooter;
       'shared.highlight-text': SharedHighlightText;
       'shared.icon-link': SharedIconLink;
       'shared.link': SharedLink;
+      'shared.phone-number': SharedPhoneNumber;
       'shared.question-answer': SharedQuestionAnswer;
       'shared.seo': SharedSeo;
       'shared.steps': SharedSteps;

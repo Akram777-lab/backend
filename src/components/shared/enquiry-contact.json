@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_enquiry_contacts",
+  "info": {
+    "displayName": "enquiry_contact",
+    "icon": "phone",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.icon-link"
+    },
+    "email": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.icon-link"
+    }
+  }
+}

@@ -32,6 +32,37 @@
             "type": "component",
             "repeatable": true,
             "component": "shared.icon-link"
+        },
+        "student_zone": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.icon-link"
+        },
+        "company": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.icon-link"
+        },
+        "top_courses": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.icon-link"
+        },
+        "course_enquiry": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.enquiry-contact"
+        },
+        "ps_text": {
+            "type": "text"
+        },
+        "legal_links": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.icon-link"
+        },
+        "bottom_address": {
+            "type": "text"
         }
     }
 }
