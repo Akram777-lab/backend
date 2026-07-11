@@ -44,9 +44,9 @@
       "component": "shared.icon-link"
     },
     "top_courses": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.icon-link"
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::course.course"
     },
     "course_enquiry": {
       "type": "component",

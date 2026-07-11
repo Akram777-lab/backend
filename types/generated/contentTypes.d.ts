@@ -936,7 +936,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   collectionName: 'home_pages';
   info: {
     description: '';
-    displayName: 'home-page';
+    displayName: 'Home Page';
     pluralName: 'home-pages';
     singularName: 'home-page';
   };
