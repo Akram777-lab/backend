@@ -231,7 +231,7 @@ export interface SharedFooter extends Struct.ComponentSchema {
     ps_text: Schema.Attribute.Text;
     socials: Schema.Attribute.Component<'shared.icon-link', true>;
     student_zone: Schema.Attribute.Component<'shared.icon-link', true>;
-    top_courses: Schema.Attribute.Component<'shared.icon-link', true>;
+    top_courses: Schema.Attribute.Relation<'oneToMany', 'api::course.course'>;
   };
 }
 
