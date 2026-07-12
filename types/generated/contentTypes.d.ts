@@ -551,6 +551,7 @@ export interface ApiCityCity extends Struct.CollectionTypeSchema {
   };
   attributes: {
     branches: Schema.Attribute.Relation<'oneToMany', 'api::branch.branch'>;
+    courses: Schema.Attribute.Relation<'oneToMany', 'api::course.course'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -694,6 +695,7 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    city: Schema.Attribute.Relation<'manyToOne', 'api::city.city'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1016,7 +1018,7 @@ export interface ApiPrivacyPolicyPrivacyPolicy extends Struct.SingleTypeSchema {
   collectionName: 'privacy_policies';
   info: {
     description: '';
-    displayName: 'privacy-policy';
+    displayName: 'Privacy Policy';
     pluralName: 'privacy-policies';
     singularName: 'privacy-policy';
   };
@@ -1093,7 +1095,7 @@ export interface ApiTermsAndConditionTermsAndCondition
   collectionName: 'terms_and_conditions';
   info: {
     description: '';
-    displayName: 'terms-and-condition';
+    displayName: 'Terms and Condition';
     pluralName: 'terms-and-conditions';
     singularName: 'terms-and-condition';
   };

@@ -157,6 +157,12 @@
                 }
             },
             "component": "shared.testimonials"
+        },
+        "city": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::city.city",
+            "inversedBy": "courses"
         }
     }
 }
