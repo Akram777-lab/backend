@@ -8,7 +8,11 @@ import strapiAdvancedUuid from "strapi-advanced-uuid/strapi-admin";
 import strapiImportExport from "strapi-import-export/strapi-admin";
 import { renderAdmin } from "@strapi/strapi/admin";
 
+import customisations from "../../src/admin/app.tsx";
+
 renderAdmin(document.getElementById("strapi"), {
+  customisations,
+
   plugins: {
     "strapi-cloud": strapiCloud,
     "users-permissions": usersPermissions,
