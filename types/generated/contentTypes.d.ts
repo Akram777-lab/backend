@@ -898,6 +898,12 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
+    course_advisor_contact: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     course_list: Schema.Attribute.Component<'items.course-item', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

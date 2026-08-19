@@ -1,0 +1,19 @@
+{
+    "collectionName": "components_shared_floating_cards",
+    "info": {
+        "displayName": "FloatingCard",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "icon": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        }
+    }
+}

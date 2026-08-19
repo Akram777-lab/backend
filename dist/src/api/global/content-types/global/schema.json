@@ -54,6 +54,14 @@
                 }
             },
             "component": "shared.footer"
+        },
+        "course_advisor_contact": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
         }
     }
 }

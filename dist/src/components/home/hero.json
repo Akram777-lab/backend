@@ -6,18 +6,52 @@
     },
     "options": {},
     "attributes": {
+        "badge": {
+            "type": "string"
+        },
+        "headingLine1": {
+            "type": "string"
+        },
+        "headingHighlight1": {
+            "type": "string"
+        },
+        "headingLine2": {
+            "type": "string"
+        },
+        "headingHighlight2": {
+            "type": "string"
+        },
         "description": {
             "type": "text"
         },
-        "title": {
-            "type": "component",
-            "repeatable": false,
-            "component": "shared.highlight-text"
+        "heroImage": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
         },
-        "subtitle": {
+        "buttons": {
             "type": "component",
-            "repeatable": false,
-            "component": "shared.highlight-text"
+            "repeatable": true,
+            "component": "shared.button",
+            "max": 2
+        },
+        "featureCards": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.feature"
+        },
+        "floatingCards": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.floating-card"
+        },
+        "statistics": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.stat"
         }
     }
 }
