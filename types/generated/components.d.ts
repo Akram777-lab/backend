@@ -149,9 +149,23 @@ export interface HomeHero extends Struct.ComponentSchema {
     displayName: 'hero';
   };
   attributes: {
+    badge: Schema.Attribute.String;
+    buttons: Schema.Attribute.Component<'shared.button', true> &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 2;
+        },
+        number
+      >;
     description: Schema.Attribute.Text;
-    subtitle: Schema.Attribute.Component<'shared.highlight-text', false>;
-    title: Schema.Attribute.Component<'shared.highlight-text', false>;
+    featureCards: Schema.Attribute.Component<'shared.feature', true>;
+    floatingCards: Schema.Attribute.Component<'shared.floating-card', true>;
+    headingHighlight1: Schema.Attribute.String;
+    headingHighlight2: Schema.Attribute.String;
+    headingLine1: Schema.Attribute.String;
+    headingLine2: Schema.Attribute.String;
+    heroImage: Schema.Attribute.Media<'images'>;
+    statistics: Schema.Attribute.Component<'shared.stat', true>;
   };
 }
 
@@ -197,6 +211,18 @@ export interface SharedAddress extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedButton extends Struct.ComponentSchema {
+  collectionName: 'components_shared_buttons';
+  info: {
+    description: '';
+    displayName: 'Button';
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    path: Schema.Attribute.String;
+  };
+}
+
 export interface SharedEnquiryContact extends Struct.ComponentSchema {
   collectionName: 'components_shared_enquiry_contacts';
   info: {
@@ -207,6 +233,32 @@ export interface SharedEnquiryContact extends Struct.ComponentSchema {
   attributes: {
     email: Schema.Attribute.Component<'shared.icon-link', false>;
     phone: Schema.Attribute.Component<'shared.icon-link', false>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedFeature extends Struct.ComponentSchema {
+  collectionName: 'components_shared_features';
+  info: {
+    description: '';
+    displayName: 'Feature';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    icon: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedFloatingCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_floating_cards';
+  info: {
+    description: '';
+    displayName: 'FloatingCard';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    icon: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -322,6 +374,23 @@ export interface SharedSeo extends Struct.ComponentSchema {
       }>;
     metaViewport: Schema.Attribute.String;
     structuredData: Schema.Attribute.JSON;
+    twitterCard: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'summary_large_image'>;
+    twitterDescription: Schema.Attribute.String;
+    twitterImage: Schema.Attribute.Media<'images'>;
+    twitterTitle: Schema.Attribute.String;
+  };
+}
+
+export interface SharedStat extends Struct.ComponentSchema {
+  collectionName: 'components_shared_stats';
+  info: {
+    description: '';
+    displayName: 'Stat';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
   };
 }
 
@@ -398,7 +467,10 @@ declare module '@strapi/strapi' {
       'home.why-choose-us': HomeWhyChooseUs;
       'items.course-item': ItemsCourseItem;
       'shared.address': SharedAddress;
+      'shared.button': SharedButton;
       'shared.enquiry-contact': SharedEnquiryContact;
+      'shared.feature': SharedFeature;
+      'shared.floating-card': SharedFloatingCard;
       'shared.footer': SharedFooter;
       'shared.highlight-text': SharedHighlightText;
       'shared.icon-link': SharedIconLink;
@@ -406,6 +478,7 @@ declare module '@strapi/strapi' {
       'shared.phone-number': SharedPhoneNumber;
       'shared.question-answer': SharedQuestionAnswer;
       'shared.seo': SharedSeo;
+      'shared.stat': SharedStat;
       'shared.steps': SharedSteps;
       'shared.sub-link': SharedSubLink;
       'shared.testimonials': SharedTestimonials;

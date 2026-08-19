@@ -42,6 +42,24 @@
         },
         "canonicalURL": {
             "type": "string"
+        },
+        "twitterTitle": {
+            "type": "string"
+        },
+        "twitterDescription": {
+            "type": "string"
+        },
+        "twitterImage": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "twitterCard": {
+            "type": "string",
+            "default": "summary_large_image"
         }
     }
 }
